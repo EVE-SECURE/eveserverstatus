@@ -30,6 +30,6 @@ $serverOpen=preg_replace('/False/', 'offline', $serverOpen);
 
 
 echo JText::_("eveTime: $currentTime \n<br/>");
-echo JText::_("Статус сервера:&nbsp;$serverOpen \n<br/>");
-echo JText::_("Игроков онлайн:&nbsp;$onlinePlayers \n<br/>");
+echo JText::_("РЎС‚Р°С‚СѓСЃ СЃРµСЂРІРµСЂР°:&nbsp;$serverOpen \n<br/>");
+echo JText::_("РРіСЂРѕРєРѕРІ РѕРЅР»Р°Р№РЅ:&nbsp;$onlinePlayers \n<br/>");
 
