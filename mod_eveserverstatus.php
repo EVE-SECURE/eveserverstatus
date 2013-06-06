@@ -31,16 +31,7 @@ $serverOpen=preg_replace('/False/',"<span style='color:#FF0000;'><b>Offline</b><
 
 
 echo JText::_("<ul class='eve-status'><li>Статус сервера:&nbsp;$serverOpen</li>");
-echo JText::_("<li>Игроков онлайн:&nbsp;<b>$onlinePlayers</b></li>");
-echo JText::_("<li>Игровое время:&nbsp;<b>$currentTime</b></li></ul>");
+echo JText::_("<li>Дата и время сервера:&nbsp;<span class='blue-text'><b>$currentTime</b></span></li>");
+echo JText::_("<li>Игроков онлайн:&nbsp;<span class='red-text'><b>$onlinePlayers</b></span></li></ul>");
 
-#$l="<ul class='eve-status'><li>Статус сервера:&nbsp;";
-#if ($vals[4]['value']=="True")
-#{
-# $l.="<span style='color:#00FF00;'><b>Online</b></span></li>";
-#}
-#else
-#{
-#    $l.="<span style='color:#FF0000;'><b>Offline</b></span></li>";
-#}
-#$l.="<li>Игроков онлайн:&nbsp;<b>".$vals[6]['value']."</b></li></ul>";
+
