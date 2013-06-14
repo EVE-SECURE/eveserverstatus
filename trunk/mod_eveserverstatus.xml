@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="4.1" method="upgrade">
-	<name>Eve Server Status</name> 
-	<creationDate>May 2013</creationDate>
-	<author>Petr Utkin</author>
-	<authorEmail>utkin.peter@gmail.com</authorEmail>
-	<copyright>Free</copyright>
-	<license>BSD License</license>
+    <name>Eve Server Status</name> 
+    <creationDate>May 2013</creationDate>
+    <author>Petr Utkin</author>
+    <authorEmail>utkin.peter@gmail.com</authorEmail>
+    <copyright>Free</copyright>
+    <license>BSD License</license>
         <version>0.0.2</version>
         <description>Eve Server Status</description>
-	<files>
-	        <filename module="mod_eveserverstatus">mod_eveserverstatus.php</filename>
-	</files>
+    <files>
+            <filename module="mod_eveserverstatus">mod_eveserverstatus.php</filename>
+            <filename>echostat.php</filename>
+    </files>
 </extension>
 

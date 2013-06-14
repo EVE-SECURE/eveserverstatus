@@ -1,31 +1,26 @@
 <?php
-#
-#(U)
-#
-#<eveapi version="2">
-#    <currentTime>2013-05-22 03:38:26</currentTime>
-#    <result>
-#	<serverOpen>True</serverOpen>
-#	<onlinePlayers>28173</onlinePlayers>
-#    </result>
-#    <cachedUntil>2013-05-22 03:41:09</cachedUntil>
-#</eveapi>
 
 defined('_JEXEC') or die('Restricted access');
+?>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 
-$url='https://api.eveonline.com/server/ServerStatus.xml.aspx';
+<div id="contentq"></div>
 
-$xml = simplexml_load_file($url);
+   <script>
+    function show()
+    {
+    $.ajax({
+    url: "modules/mod_eveserverstatus/echostat.php",
+    cache: false,
+    success: function(html){
+    $("#contentq").html(html);
+}
+    });
+}
+$(document).ready(function(){
+    show();
+    setInterval('show()',60000);
+});
+    </script>
 
-$currentTime=$xml->currentTime;
-$serverOpen=$xml->result->serverOpen;
-$onlinePlayers=$xml->result->onlinePlayers;
 
-$currentTime=preg_replace('/(\d\d:\d\d):\d\d/',"\\1",$currentTime);
-
-$serverOpen=preg_replace('/True/',"<span style='color:#00FF00;'><b>Online</b></span>",$serverOpen);
-$serverOpen=preg_replace('/False/',"<span style='color:#FF0000;'><b>Offline</b></span>", $serverOpen);
-
-echo JText::_("<ul class='eve-status'><li>Статус сервера:&nbsp;$serverOpen</li>");
-echo JText::_("<li>Дата и время сервера:&nbsp;<span class='blue-text'><b>$currentTime</b></span></li>");
-echo JText::_("<li>Игроков онлайн:&nbsp;<span class='blue-text'><b>$onlinePlayers</b></span></li></ul>");
