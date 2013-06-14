@@ -6,7 +6,7 @@
     <authorEmail>utkin.peter@gmail.com</authorEmail>
     <copyright>Free</copyright>
     <license>BSD License</license>
-        <version>0.0.2</version>
+        <version>0.0.3</version>
         <description>Eve Server Status</description>
     <files>
             <filename module="mod_eveserverstatus">mod_eveserverstatus.php</filename>
