@@ -22,7 +22,7 @@ $currentTime=$xml->currentTime;
 $serverOpen=$xml->result->serverOpen;
 $onlinePlayers=$xml->result->onlinePlayers;
 
-$currentTime=preg_replace('/(\d\d:\d\d):\d\d/',"\\1",$currentTime);
+#$currentTime=preg_replace('/(\d\d:\d\d):\d\d/',"\\1",$currentTime);
 
 $serverOpen=preg_replace('/True/',"<span style='color:#00FF00;'><b>Online</b></span>",$serverOpen);
 $serverOpen=preg_replace('/False/',"<span style='color:#FF0000;'><b>Offline</b></span>", $serverOpen);
