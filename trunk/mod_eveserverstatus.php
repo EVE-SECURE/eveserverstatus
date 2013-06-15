@@ -21,7 +21,7 @@ defined('_JEXEC') or die('Restricted access');
 }
 jQuery(document).ready(function(){
     show();
-    setInterval('show()',1000);
+    setInterval('show()',60000);
 });
     </script>
 
