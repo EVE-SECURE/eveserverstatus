@@ -1,0 +1,1 @@
+plugin for joomla for eve server status
